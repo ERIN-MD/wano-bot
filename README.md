@@ -6,7 +6,7 @@
 <img src="https://c.tenor.com/D2H0hPltOdYAAAAM/golden-boy-fake-keyboard-programing-coding-paper-book.gif" width="400" height="230"/>
 </div>
 <br>
-<div class="tenor-gif-embed" data-postid="16796520503045927050" data-share-method="host" data-aspect-ratio="1.09692" data-width="100%"><a href="https://tenor.com/view/gear-5-one-piece-laughing-gif-16796520503045927050">Gear 5 One Piece GIF</a>from <a href="https://tenor.com/search/gear+5-gifs">Gear 5 GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
 
 
 ## `creds.json لاخذ ملف`
