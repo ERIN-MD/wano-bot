@@ -8,4 +8,7 @@
 <br>
 
 <h1>creds.json لاخذ ملف </h1> <LI
-<P>https://replit.com/@kofdemon87/LUFF-BOT?v=1</P>
+
+<a href="https://replit.com/@kofdemon87/LUFF-BOT?v=1">
+  <img src="https://i.imgur.com/ujYTev3.png" alt="tiktok" width="120" height="120">
+</a>
