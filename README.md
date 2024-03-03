@@ -9,9 +9,9 @@
 
 <h1> </h1> <LI
 
-<a href="https://replit.com/@kofdemon87/LUFF-BOT?v=1">
+<a href="https://www.tiktok.com/@hackermenu0">
   <img src="https://i.imgur.com/ujYTev3.png" alt="tiktok" width="120" height="120">
 </a>
-
+<br>
 ## `creds.json لاخذ ملف`
 [![Cheems Bot](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@kofdemon87/LUFF-BOT?v=1)
