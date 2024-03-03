@@ -12,3 +12,6 @@
 <a href="https://replit.com/@kofdemon87/LUFF-BOT?v=1">
   <img src="https://i.imgur.com/ujYTev3.png" alt="tiktok" width="120" height="120">
 </a>
+
+## `Scan QR Code For Session`
+[![Cheems Bot](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@kofdemon87/LUFF-BOT?v=1)
