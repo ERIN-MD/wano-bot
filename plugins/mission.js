@@ -19,7 +19,7 @@ let handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, isPr
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let videoUrl = 'https://telegra.ph/file/edc548e7f0ec1a6e684a3.mp4';
+let videoUrl = 'https://telegra.ph/file/6f7ba09acdb04ad49a5a6.jpg';
   let vn = './media/menu.mp3';
   const user = global.db.data.users[m.sender];
   const {money, joincount} = global.db.data.users[m.sender];
@@ -40,9 +40,9 @@ let str = `
 *◞{إِنَّمَا ٱلتَّوۡبَةُ عَلَى ٱللَّهِ لِلَّذِينَ يَعۡمَلُونَ ٱلسُّوٓءَ بِجَهَٰلَةٖ ثُمَّ يَتُوبُونَ مِن قَرِيبٖ فَأُوْلَٰٓئِكَ يَتُوبُ ٱللَّهُ عَلَيۡهِمۡۗ وَكَانَ ٱللَّهُ عَلِيمًا حَكِيمٗا}◜*
 *↻╍╍━┛🕋┗━╍╍↺*
 *◞❐ أهـلا وسـهـلاً بـك يـا ${taguser}
-*◞❐ إسـم الـبـوت ⇠『Nezuko』◈◜*
+*◞❐ إسـم الـبـوت ⇠『⛩️┃🏮WONO🏮┃⛩️』◈◜*
 *◞❐ إسـم الـمـنـصـة ⇠『HEROKU』◈◜*
-*◞❐ الـمـطـور ⇠『kaneki&JOHAN』◈◜*
+*◞❐ الـمـطـور ⇠『KATAKURI』◈◜*
 *◞❐ عـدد الـمـسـتـخـدمـيـن ${rtotalreg}
 *◞❐ وقـت الـتـشـغـيـل ${uptime}
 *◞❐ الـتـوقـيـت ${date}
