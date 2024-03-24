@@ -1,19 +1,18 @@
 let handler = async (m, { conn }) => {
-conn.reply(m.chat,`——————–—\n\n————————“${pickRandom(global.verdaad)}“——————–—\n\n——————–—`, m)
-}
-handler.help = ['تاج']
-handler.tags = ['fun']
-handler.command = /^تاج/i
-export default handler
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-global.verdaad = [
-"اول منشن ذكي",
+conn.reply(m.chat,`**\n\n*“${pickRandom(global.verdaad)}”*\n\n**`, m)
+let handler = m => m; 
+  
+ handler.all = async function (m) { 
+   let chat = global.db.data.chats[m.chat]; 
+   let responses; 
+   if (/^تاج$/i.test(m.text)) { 
+     responses = [ 
+
+ "اول منشن ذكي",
 "اول منشن عمك", 
 "اول منشن يحبك", 
 "ثاني منشن حمار", 
-" ثالث منشن يحب كانيكي اكثر منك", 
+" ثالث منشن يحب رايلي اكثر منك", 
 "خامس منشن اوتاكو ورع", 
 "ثالث منشن خايس", 
 "ثاني منشن انت عمه", 
@@ -51,4 +50,13 @@ global.verdaad = [
 "ثالث منشن يراقبك" , 
 "تاسع منشن يشوفك بطل" , 
 " رابع منشن يشوفك ورع"
-]
+ ];
+    }  
+   if (responses) { 
+     let randomIndex = Math.floor(Math.random() * responses.length); 
+     conn.reply(m.chat, responses[randomIndex], m); 
+   } 
+   return !0 
+ }; 
+  
+ export default handler;
