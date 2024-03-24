@@ -17,7 +17,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
   *🜋↫╎الـجـائزة💰↞ ${poin} نقاط┇*
 ∞┇━━━ •🐉• ━━━┇∞
 *✠ ~تــ✍︎ــوقــيــع ↯:~*
-『𝙕𝙊𝙍𝙊-𝘽𝙊𝙏』
+『⛩️┃🏮WONO🏮┃⛩️』
      `.trim()
     conn.tebakbendera[id] = [
         await conn.sendFile(m.chat, json.img, '', caption, m),
