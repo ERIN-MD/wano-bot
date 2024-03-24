@@ -9,7 +9,7 @@ let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
       let lvl = `┓━━━━【 *الـتصـنـيف* 】━━━━┏
-┇ *🤠 الاسم* : ${name} ღ
+┇ *🤠 الاسم* : ${name} 
 ┇ *🧮 الفل :* *${user.level}*
 ┇ *⚡ مصنف :* ${role}
 ┇ *🏹 نقاط الخبرة :* *${user.exp - min}/${xp}*
