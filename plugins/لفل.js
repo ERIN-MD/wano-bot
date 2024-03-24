@@ -27,7 +27,7 @@ conn.sendFile(m.chat, pp, 'levelup.jpg', lvl, m)
 ┇🎗 *المستوي السابق :* *${before}*
 ┇🎁 *المستوي الحالي :* *${user.level}*
 ┇🏹 *التصنيف :* ${role} 
-┛━━━⊰ Nezuko ⊱━━━┗`.trim()
+┛━━━⊰ ⛩️┃🏮WONO🏮┃⛩️ ⊱━━━┗`.trim()
         try {
             const img = await levelup(teks, user.level)
             conn.sendFile(m.chat, pp, 'levelup.jpg', str, m)
