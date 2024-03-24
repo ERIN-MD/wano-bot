@@ -1,15 +1,14 @@
 let handler = async (m, { conn }) => {
 conn.reply(m.chat,`**\n\n*“${pickRandom(global.verdaad)}”*\n\n**`, m)
-}
-handler.help = ['تاج']
-handler.tags = ['fun']
-handler.command = /^تاج/i
-export default handler
-function pickRandom(list) {
-return list[Math.floor(list.length * Math.random())]
-}
-global.verdaad = [
-"اول منشن ذكي",
+let handler = m => m; 
+  
+ handler.all = async function (m) { 
+   let chat = global.db.data.chats[m.chat]; 
+   let responses; 
+   if (/^كت$/i.test(m.text)) { 
+     responses = [ 
+
+ "اول منشن ذكي",
 "اول منشن عمك", 
 "اول منشن يحبك", 
 "ثاني منشن حمار", 
