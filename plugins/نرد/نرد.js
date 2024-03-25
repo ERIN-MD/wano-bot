@@ -7,7 +7,7 @@ const dir = [
   'https://raw.githubusercontent.com/Dark-Man747/worker-bot/main/dado/dado6.webp'
 ];
 let handler = async (m, { conn }) => {
-  conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', '', m)
+  conn.sendFile(m.chat, dir[Math.floor(Math.random(🎲) * dir.length)], 'dado.webp', 'كاتاكوري', m)
   m.react('🎲')
 }
 handler.help = ['dado']
