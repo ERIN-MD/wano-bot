@@ -1,9 +1,9 @@
 import { webp2mp4 } from '../lib/webp2mp4.js'
 import { ffmpeg } from '../lib/converter.js'
 let handler = async (m, { conn, usedPrefix, command }) => {
-if (!m.quoted) throw `*اعمل ريبلاي للاستيكر ال عاوز تحوله لفديو يحب ${usedPrefix + command}*`
+if (!m.quoted) throw `*اعمل ريبلاي للاستيكر ال عاوز تحوله لفديو  ${usedPrefix + command}*`
 let mime = m.quoted.mimetype || ''
-if (!/webp/.test(mime)) throw `*اعمل ريبلاي للاستيكر ال عاوز تحوله لفديو يحب ${usedPrefix + command}*`
+if (!/webp/.test(mime)) throw `*اعمل ريبلاي للاستيكر ال عاوز تحوله لفديو  ${usedPrefix + command}*`
 let media = await m.quoted.download()
 let out = Buffer.alloc(0)
 if (/webp/.test(mime)) {
