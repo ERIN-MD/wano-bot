@@ -327,7 +327,7 @@ const dir = [
 "https://telegra.ph/file/60262d7d56b4352993e88.jpg",
 ];
 let handler = async (m, { conn }) => {
-  conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', '', m)
+  conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', 'game', m)
   m.react('🏮')
 }
 handler.help = ['dado']
