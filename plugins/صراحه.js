@@ -1,17 +1,14 @@
-let handler  = async (m, { conn }) => {
-conn.reply(m.chat,`**\n          \n*『${pickRandom(global.bjssvjs)}』*\n**`, m)
+ let handler = async (m, { conn, text}) => {
+m.reply(`\n➢ "${pickRandom(global.piropo)}"\n`)
 }
-handler.help = ['uwvssj']
-handler.tags = ['fun']
-handler.command = /صراحه|صراحة|الصراحه/i
-export default handler
-
-function pickRandom(list) {
-  return
-  list[Math.floor(list.length * Math.random())]
-}
-
- global.bjssvjs = [ 
+handler.tags = ['صراحه']
+handler.command = ['صراحة','صراحه']
+ export default handler
+    
+ function pickRandom(list) {
+ return list[Math.floor(list.length * Math.random())]}
+    
+ global.piropo = [
    
  "صراحه  |  صوتك حلوة؟",
 "صراحه  |  التقيت الناس مع وجوهين؟",
