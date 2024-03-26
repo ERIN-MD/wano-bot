@@ -1,27 +1,23 @@
-import { googleIt } from '@bochilteam/scraper'
-let handler = async (m, { conn, command, args }) => {
-const fetch = (await import('node-fetch')).default
-let full = /f$/i.test(command)
-let text = args.join` `
-if (!text) return conn.reply(m.chat, '*لاتنسا موضوع البحث يحب*', m)
-let url = 'https://google.com/search?q=' + encodeURIComponent(text)
-let search = await googleIt(text)
-let msg = search.articles.map(({
-// header,
-title,
-url,
-description
-}) => {
-return `*${title}*\n_${url}_\n_${description}_`
-}).join('\n\n')
-try {
-let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url, full }))).arrayBuffer()
-if (/<!DOCTYPE html>/i.test(ss.toBuffer().toString())) throw ''
-await conn.sendFile(m.chat, ss, 'error.png', url + '\n\n' + msg, m)
-} catch (e) {
-m.reply(msg)
-}}
-handler.help = ['google', 'بحث'].map(v => v + ' <pencarian>')
-handler.tags = ['internet']
-handler.command = /^بحث?$/i
-export default handler
+import yts from 'yt-search';
+import fs from 'fs';
+
+const handler = async (m, {conn, text}) => {
+  if (!text) throw '⚠️ *_ما الذي تريد البحث عنه في بوتيوب?_*';
+  const results = await yts(text);
+  const tes = results.all;
+  const teks = results.all.map((v) => {
+    switch (v.type) {
+      case 'video': return `
+° *_${v.title}_*
+↳ 🫐 *_الرابط :_* ${v.url}
+↳ 🕒 *_المده :_* ${v.timestamp}
+↳ 📥 *_التاريخ :_* ${v.ago}
+↳ 👁 *_المشاهدات :_* ${v.views}`;
+    }
+  }).filter((v) => v).join('\n\n◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦◦\n\n');
+  conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m);
+};
+handler.help = ['ytsearch *<texto>*'];
+handler.tags = ['search'];
+handler.command = ['بحث', 'yts'];
+export default handler;
