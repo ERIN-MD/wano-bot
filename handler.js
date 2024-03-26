@@ -1499,7 +1499,7 @@ export async function callUpdate(callUpdate) {
         const callmsg = await mconn.conn.reply(nk.from, `Hello *@${nk.from.split('@')[0]}*, las ${nk.isVideo ? 'video calls' : 'calls'} are not allowed, you will be blocked.\n-\n If you accidentally called contact my creator to unblock you!`, false, {mentions: [nk.from]});
         // let data = global.owner.filter(([id, isCreator]) => id && isCreator)
         // await this.sendContact(nk.from, data.map(([id, name]) => [id, name]), false, { quoted: callmsg })
-        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;BOBIZA;;;\nFN:BOT\nORG:NOUREDDINE\nTITLE:\nitem1.TEL;waid=212605784394:212605784394\nitem1.X-ABLabel:noureddine\nX-WA-BIZ-DESCRIPTION:[❗] contact noureddine ouafy\nEND:VCARD`;
+        const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:;BOBIZA;;;\nFN:BOT\nORG:NOUREDDINE\nTITLE:\nitem1.TEL;waid=967730068050:967730068059\nitem1.X-ABLabel:noureddine\nX-WA-BIZ-DESCRIPTION:[❗] contact noureddine ouafy\nEND:VCARD`;
         await mconn.conn.sendMessage(nk.from, {contacts: {displayName: 'BOBIZA', contacts: [{vcard}]}}, {quoted: callmsg});
         await mconn.conn.updateBlockStatus(nk.from, 'block');
       }
