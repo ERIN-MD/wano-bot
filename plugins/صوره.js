@@ -1,14 +1,26 @@
-import { googleImage } from '@bochilteam/scraper'
+import fetch from 'node-fetch';
+
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw `*[❗خطاء❗] مثال علي الامر ${usedPrefix + command} كاتاكوري*`
-if (m.text.includes('gore') || m.text.includes('cp')|| m.text.includes('porno')|| m.text.includes('Gore')|| m.text.includes('rule')|| m.text.includes('CP')|| m.text.includes('Rule34')) return m.reply('[❗خطاء❗] لا يمكنني إرسال هذا المحتوى ، المجموعة محظورة \n إذا كنت مشرفًا وتريد تنشيطها ، اخبر المطور')  
-const res = await googleImage(text)
-let image = await res.getRandom()
-let link = image
-conn.sendFile(m.chat, link, 'error.jpg', `🔎 *النتيجه ل:* ${text}\n🔗 *من* ${link}\n🌎 *محرك البحث:* جوجل`, m)}
-//let captionn = `🔎 *𝚁𝙴𝚂𝚄𝙻𝚃𝙰𝙳𝙾 𝙳𝙴:* ${text}\n🔗 *𝙻𝙸𝙽𝙺* ${link}\n🌎 *𝙱𝚄𝚂𝙲𝙰𝙳𝙾𝚁:* Google`
-//conn.sendButton(m.chat, captionn, author, link, [['🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `#imagen ${text}`]], m)}
-handler.help = ['gimage <query>', 'imagen <query>']
-handler.tags = ['internet', 'tools']
-handler.command = /^(gimage|image|صوره|imagen)$/i
-export default handler
+  if (!text) throw `*يقوم هذا الامر بصناعه صوره ب الذكاء الاصطناعي *\n\n*مثال للأستخدام (لضمان صوره دقيقه اكتب ب الانجليزيه)*\n*◉ ${usedPrefix + command} بنت انمي جميله*\n*◉ ${usedPrefix + command} رجل يقود بيتزا*`;
+
+  try {
+    m.reply('*ثانيه الصوره بتجهز...*');
+
+    const endpoint = `https://gurugpt.cyclic.app/dalle?prompt=${encodeURIComponent(text)}`;
+    const response = await fetch(endpoint);
+
+    if (response.ok) {
+      const imageBuffer = await response.buffer();
+      await conn.sendFile(m.chat, imageBuffer, 'image.png', null, m);
+    } else {
+      throw '*Image generation failed*';
+    }
+  } catch {
+    throw '*Oops! Something went wrong while generating images. Please try again later.*';
+  }
+};
+
+handler.help = ['dalle'];
+handler.tags = ['AI'];
+handler.command = ['dalle', 'صورهai', 'gimg', 'openai2'];
+export default handler;
