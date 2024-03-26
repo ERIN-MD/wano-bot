@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['Miku bot']
 handler.tags = ['Miku bot']
-handler.command = /^تطقيم بنات|طقم بنات$/i
+handler.command = /^1تطقيم1 |طقم $/i
 handler.limit = true
 
 export default handler
