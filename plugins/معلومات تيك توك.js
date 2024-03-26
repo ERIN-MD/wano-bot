@@ -18,6 +18,6 @@ let handler = async (m, { conn, text, args }) => {
 }
 handler.help = ['tiktokstalk']
 handler.tags = ['downloader']
-handler.command = /^معلومات-تيكتوك)$/i
+handler.command = /^معلومات-تيكتوك|تيك|تيكتوك)$/i
 
 export default handler
