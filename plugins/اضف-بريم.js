@@ -1,28 +1,16 @@
-//import db from '../lib/database.js'
-
-let handler = async (m, { conn, text, usedPrefix, command }) => {
+let handler = async (m, { conn, text }) => {
 let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
-    else who = m.chat
-    let user = global.db.data.users[who]
-    if (!who) throw `✳️ *منشن شخص ما*\n\n📌 مثال : ${usedPrefix + command} @الشخص`
-if (global.prems.includes(who.split`@`[0])) throw '□ منشن الشخص اللي عايز تضيف له بريميام'
+if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
+else who = m.chat
+if (!who) throw `*[❗] حط منشن العضو الي تريد جعله مميزاً   *`
+if (global.prems.includes(who.split`@`[0])) throw '*[❗] المستخدم الذي تم إدخاله هو بالفعل مستخدم متميز (بريميوم)*'
 global.prems.push(`${who.split`@`[0]}`)
-
-conn.reply(m.chat, `
-✅ بــريـميام
-
-@${who.split`@`[0]} الان لقد اصبحت مستخدم بريميام !!
-
-╣ *المنشن:* ${user.name}
-`, m, { mentions: [who] })
-
+let textprem = `*[❗] @${who.split`@`[0]} أنت الآن مستخدم متميز ولن يكون لديك حدود عند استخدام البوت (تستطيع استخدام اي امر مثل المطور)*`
+m.reply(textprem, null, { mentions: conn.parseMention(textprem) })
 }
-handler.help = ['addprem <@tag>']
+handler.help = ['addprem <@user>']
 handler.tags = ['owner']
-handler.command = ['addprem', 'ضيف_بريميام'] 
-
+handler.command = /^(add|\+)prem|بريم$/i
 handler.group = true
 handler.rowner = true
-
 export default handler
