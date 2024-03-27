@@ -243,6 +243,6 @@ m.reply(`
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['config']
-handler.command = /^((en|dis)able|(turn)?ت(n|عطيل)|[01])$/i
+handler.command = /^((en|dis)able|(turn)?ت(شغيل|عطيل)|[01])$/i
 
 export default handler
