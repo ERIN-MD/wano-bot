@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   await conn.sendMessage(m.chat, { video: { url: dir[Math.floor(Math.random() * dir.length)] }, caption: global.veeeee }, { quoted: m })
 }
 
-handler.help = ['اديت2''2ايديت']
+handler.help = ['ايديت2']
 handler.tags = ['anime']
 handler.command = /^(اديت2|ايديت2)$/i
 handler.limit = false
