@@ -1,5 +1,6 @@
-let handler = async (m, { conn, command, text }) => {`
-⛩️│الـتـنزيـل│⛩️
+let handler = async (m, { conn, command, text }) => {
+let love = `
+  ⛩️│الـتـنزيـل│⛩️
 
 *🏮 │انستغرام*
 *🏮 │انستا*
@@ -15,5 +16,5 @@ let handler = async (m, { conn, command, text }) => {`
 m.reply(love, null, { mentions: conn.parseMention(love) })}
 handler.help = ['love']
 handler.tags = ['fun']
-handler.command = /^(التنزيلات)$/i
+handler.command = /^التنزيلات$/i
 export default handler
