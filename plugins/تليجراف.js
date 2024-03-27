@@ -11,5 +11,5 @@ m.reply(`*رابط ملفك:* ${link}`)
 }
 handler.help = ['tourl <reply image>']
 handler.tags = ['sticker']
-handler.command = /^(تليجراف|رفع-تليجراف)$/i
+handler.command = /^(تليجراف|لرابط)$/i
 export default handler
