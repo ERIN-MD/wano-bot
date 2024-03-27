@@ -1,15 +1,6 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
   const res = await lolivid[Math.floor(Math.random() * lolivid.length)];
-  conn.sendMessage(m.chat, {video: {url: res}, caption: `*ʟᴏʟɪ ɪѕ ᴄᴜᴛᴇ 🥺*`}, {quoted: m});
-};
-handler.help = ['lolivid'];
-handler.tags = ['random'];
-handler.command = /^(التنزيلات|lolivideos|lolívid)$/i;
-export default handler;
-
-global.lolivid = [
-  'https://telegra.ph/file/f4a1b6c531ac07355ef82.mp4  
-  ⛩️│الـتـنزيـل│⛩️
+  conn.sendMessage(m.chat, {video: {url: res}, caption: `*⛩️│الـتـنزيـل│⛩️
 
 *🏮 │انستغرام*
 *🏮 │انستا*
@@ -20,6 +11,14 @@ global.lolivid = [
 *🏮 │بحث*
 *🏮 │فيديو*
 *🏮 │تطبيق*
-*🏮 │صوره*',
+*🏮 │صوره**`}, {quoted: m});
+};
+handler.help = ['التنزيلات'];
+handler.tags = ['random'];
+handler.command = /^التنزيلات$/;
+export default handler;
+
+global.التنزيلات = [
+  'https://telegra.ph/file/f4a1b6c531ac07355ef82.mp4',
   
 ];
