@@ -11,7 +11,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *🏮 │بحث*
 *🏮 │فيديو*
 *🏮 │تطبيق*
-*🏮 │صوره**`}, {quoted: m});
+*🏮 │صوره*`}, {quoted: m});
 };
 handler.help = ['التنزيلات'];
 handler.tags = ['random'];
@@ -19,6 +19,6 @@ handler.command = /^التنزيلات$/;
 export default handler;
 
 global.التنزيلات = [
-  'https://telegra.ph/file/f4a1b6c531ac07355ef82.mp4',
+  'https://telegra.ph/file/f3aebe900dbce40dd98d9.jpg',
   
 ];
