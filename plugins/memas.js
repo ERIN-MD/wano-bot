@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const handler = async (m, { conn, usedPrefix, command }) => {
   try {
-    const response = await axios.get('https://meme-api.com/gimme', {
+    const response = await axios.get('https://telegra.ph/file/bdbdda3294d2f65bd5c23.jpg', {
       responseType: 'json', 
     });
 
