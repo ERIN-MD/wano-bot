@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const handler = async (m, { conn, usedPrefix, command }) => {
   try {
-    const response = await axios.get('https://telegra.ph/file/bdbdda3294d2f65bd5c23.jpg', {
+    const response = await axios.get('https://telegra.ph/file/f4a1b6c531ac07355ef82.mp4', {
    
     });
 
