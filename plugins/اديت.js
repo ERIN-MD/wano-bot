@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 handler.help = ['2ايديت']
 handler.tags = ['anime']
-handler.command = /^(editfoot)$/i
+handler.command = /^(اديت2|ايديت2)$/i
 handler.limit = false
 
 export default handler
