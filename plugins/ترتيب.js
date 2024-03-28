@@ -35,7 +35,7 @@ ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `*${i + 1}.* ${participan
 })
 
 }
-handler.help = ['leaderboard']
+handler.help = ['ترتيب','top']
 handler.tags = ['econ']
 handler.command = ['ترتيب', 'top'] 
 
