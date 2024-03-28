@@ -55,7 +55,7 @@ export async function before(m) {
         }
     } else {
         // If the time difference is greater than or equal to 10 seconds, reset the sender's spam count.
-        this.spam[m.sender].count = 0;
+        this.spam[m.sender].count = 10;
     }
 
     // Update the 'lastspam' timestamp to the current time for the sender.
