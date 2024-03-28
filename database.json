@@ -1,6 +1,6 @@
 {
   "users": {
-    "212605784394@s.whatsapp.net": {
+    "967730068059@s.whatsapp.net": {
       "afk": -1,
       "wait": 0,
       "afkReason": "",
@@ -439,7 +439,7 @@
       "lastCommandTime": 1701256023724,
       "commandCount": 1
     },
-    "212637147800@s.whatsapp.net": {
+    "967730068059@s.whatsapp.net": {
       "afk": -1,
       "wait": 0,
       "afkReason": "",
@@ -878,7 +878,7 @@
     }
   },
   "chats": {
-    "212605784394@s.whatsapp.net": {
+    "967730068059@s.whatsapp.net": {
       "isBanned": false,
       "welcome": true,
       "detect": true,
@@ -915,7 +915,7 @@
   "msgs": {},
   "sticker": {},
   "settings": {
-    "212637147800@s.whatsapp.net": {
+    "967730068059@s.whatsapp.net": {
       "self": false,
       "autoread": false,
       "autoread2": false,
