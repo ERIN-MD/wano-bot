@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text}) => {
-m.reply(`"${pickRandom(global.piropo)}"`)
+m.reply(`"${pickRandom(global.Hadiths)}"`)
 }
 handler.tags = ['Hadiths']
 handler.command = ['حديث','احاديث']
