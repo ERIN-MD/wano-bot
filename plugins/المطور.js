@@ -56,7 +56,7 @@ conn.sendMessage(m.chat, {
   gifPlayback: true,gifAttribution: 0
     }, { quoted: m });
 }; 
-handler.help = ['main']
+handler.help = ['المطور']
 handler.tags = ['group']
 handler.command = ['المطور'] 
 
