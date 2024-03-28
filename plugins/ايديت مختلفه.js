@@ -1,4 +1,23 @@
+let handler = async (m, { conn, usedPrefix, command }) => {
+  await conn.sendMessage(m.chat, {
+   react: {
+ text: "🎥",
+ key: m.key,
+   }
+  })
+
+  await conn.sendMessage(m.chat, { video: { url: dir[Math.floor(Math.random() * dir.length)] }, caption: global.veeeee }, { quoted: m })
+}
+
+handler.help = ['ايديت']
+handler.tags = ['anime']
+handler.command = /^(اديت|ايديت)$/i
+handler.limit = false
+
+export default handler
+
 const dir = [
+
 'https://telegra.ph/file/d6269a1f7f2bf94a406df.mp4',  'https://telegra.ph/file/8034305ce5330ebc11a99.mp4',  'https://telegra.ph/file/5c70fbac268fb54ff847e.mp4',  'https://telegra.ph/file/f2a6bec5b7635364d6768.mp4',  'https://telegra.ph/file/d7f5799da8e64b9aff5aa.mp4',  'https://telegra.ph/file/261100ff5fe590b08e35d.mp4', 'https://telegra.ph/file/6214d68e0da156ef8e54a.mp4',
 'https://telegra.ph/file/960bece94cac521c5fd68.mp4',
 'https://telegra.ph/file/759c10b0e0a1605ae9716.mp4',
@@ -97,13 +116,7 @@ const dir = [
     'https://telegra.ph/file/b36ef01fc267e4f331caf.mp4',
     'https://i.imgur.com/3DDgCzb.mp4',
     'https://i.imgur.com/8QDdUHo.mp4',
-];
-let handler = async (m, { conn }) => {
-  conn.sendFile(m.chat, dir[Math.floor(Math.random() * dir.length)], 'dado.webp', '', m)
-  m.react('🎞');
-}
-handler.help = ['dado']
-handler.tags = ['game']
-handler.command = ['ايديت', 'اديت'] 
 
-export default handler
+
+'',
+]
