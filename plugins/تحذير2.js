@@ -12,8 +12,8 @@ const handler = async (m, {conn, text, command, usedPrefix}) => {
   user.warn -= 1;
   await m.reply(`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `♻️ *@${who.split`@`[0]}*`} 𝚂𝙴 𝙻𝙴 𝚀𝚄𝙸𝚃𝙾 𝚄𝙽𝙰 𝙰𝙳𝚅𝙴𝚁𝚃𝙴𝙽𝙲𝙸𝙰\n*ADVERTENCIAS ${user.warn}/3*`, null, {mentions: [who]});
 };
-handler.command = /^(unwarn|delwarn|deladvertir|deladvertencia|delwarning)$/i;
-handler.group = 'تحذير';
+handler.command = /^(unwarn|delwarn|deladvertir|deladvertencia|delwarning|تحذير)$/i;
+handler.group = 'true';
 handler.admin = true;
-handler.botAdmin = 'تحذير';
+handler.botAdmin = 'true';
 export default handler;
