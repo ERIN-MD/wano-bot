@@ -1,14 +1,14 @@
 let handler = async (m, { conn, text}) => {
 m.reply(`"${pickRandom(global.piropo)}"`)
 }
-handler.tags = ['احاديث']
+handler.tags = ['Hadiths']
 handler.command = ['حديث','احاديث']
  export default handler
     
  function pickRandom(list) {
  return list[Math.floor(list.length * Math.random())]}
     
- global.piropo = [
+ global.Hadiths = [
 "لَمَّا خَلَقَ اللَّهُ الخَلْقَ، كَتَبَ في كِتَابِهِ، فَهو عِنْدَهُ فَوْقَ العَرْشِ: إنَّ رَحْمَتي تَغْلِبُ غَضَبِي.\n\n- الراوي: أبو هريرة\n- حكم الحديث: [صحيح]",
 "لَمَّا قَضَى اللَّهُ الخَلْقَ، كَتَبَ في كِتَابِهِ علَى نَفْسِهِ، فَهو مَوْضُوعٌ عِنْدَهُ إنَّ رَحْمَتي تَغْلِبُ غَضَبِي.\n\n- الراوي: أبو هريرة\n- حكم الحديث: [صحيح]",
 "قالَ اللَّهُ عَزَّ وَجَلَّ: سَبَقَتْ رَحْمَتي غَضَبِي.\n\n- الراوي: أبو هريرة\n- حكم الحديث: [صحيح]",
