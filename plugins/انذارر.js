@@ -1,44 +1,27 @@
-let war = global.maxwarn
-let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }) => {      
-        let who
-        if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
-        else who = m.chat
-        if (!who) throw `❒ منشن شخص ما\n\n❍ مثال : ${usedPrefix + command} @الشخص`
-        if (!(who in global.db.data.users)) throw `❒ المستخدم غير موجود في قاعدة البيانات الخاصة بي`
-        let name = conn.getName(m.sender)
-        let warn = global.db.data.users[who].warn
-        if (warn < war) {
-            global.db.data.users[who].warn += 1
-            m.reply(`
-⚠️ *تحذير المستخدم* ⚠️
-
-❒ *المشرف:* ${name}
-❒ *مستخدم:* @${who.split`@`[0]}
-❒ *الانذارات:* ${warn + 1}/${war}
-❒ *السبب:* ${text}`, null, { mentions: [who] }) 
-            m.reply(`
-⚠️ *تحذير* ⚠️
-لقد تلقيت تحذيرًا من المشرف
-
-❒ *الانذارات:* ${warn + 1}/${war} 
-اذا تلقيت *${war}* تحذيرات سيتم إزالتك تلقائيًا من المجموعة`, who)
-        } else if (warn == war) {
-            global.db.data.users[who].warn = 0
-            m.reply(`❍ تجاوز المستخدم ال *${war}* من التحذيرات لذلك سيتم إزالة الشخص`)
-            await time(3000)
-            await conn.groupParticipantsUpdate(m.chat, [who], 'remove')
-            m.reply(`❍ لقد تم ازالتك من الجروب *${groupMetadata.subject}* لان تم تحذيرك *${war}* مره`, who)
-        }
+let handler = async (m, { conn, text, command, usedPrefix }) => {
+let pp = './src/warn.jpg'
+let who
+if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text
+else who = m.chat
+let user = global.db.data.users[who]
+let bot = global.db.data.settings[conn.user.jid] || {}
+let warntext = `*[❗] يرجي وضع منشن للشخص او الرد علي رساله له @منشن*\n\n*—◉ مثال:*\n*${usedPrefix + command} @${global.suittag}*`
+if (!who) throw m.reply(warntext, m.chat, { mentions: conn.parseMention(warntext)}) 
+user.warn += 1
+  
+await conn.sendButton(m.chat,`${user.warn == 1 ? `*@${who.split`@`[0]}*` : `*@${who.split`@`[0]}*`} 𝚁حصلت على تحذير في هذه المجموعة!`, `*تحذيرات ${user.warn}/3*\n\n${wm}`, pp, [['📋 قائمة التحذيرات 📋', '#listwarn']], m, { mentions: [who] })
+	
+if (user.warn >= 3) {
+if (!bot.restrict) return m.reply('*[❗] لم يتم تمكين القيود على مالك الروبوت (#تعفيل) استخدم هذا الامر لتمكين التحذيرات*')        
+user.warn = 0
+await m.reply(`لقد حذرتك عدة مرات!!\n*@${who.split`@`[0]}* حتي اصبحوا *3* تحذيرات سوف يتم طردك بعد 0 ثانية 👽`, null, { mentions: [who]})
+//user.banned = true
+await conn.groupParticipantsUpdate(m.chat, [who], 'remove') 
+} 
+return !1
 }
-handler.help = ['warn @user']
-handler.tags = ['group']
-handler.command = ['انذار'] 
+handler.command = /^(advertir|انذار|warn|تحذير)$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
-
 export default handler
-
-const time = async (ms) => {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
