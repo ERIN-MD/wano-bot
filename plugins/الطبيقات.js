@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, args }) => {
 try {
 let json = await fetch(`https://latam-api.vercel.app/api/playstore?apikey=brunosobrino&q=${enc}`)
 let gPlay = await json.json()
-if (!gPlay.titulo) return m.reply(`[ ! ] بدون نتائج`)
+
 conn.sendMessage(m.chat,{image:{url: gPlay.imagen},caption:`🔍 نتيجة البحث: ${gPlay.titulo}
 ───────•••───────
 🧬 المعرف: ${gPlay.id}
