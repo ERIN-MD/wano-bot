@@ -13,7 +13,7 @@ let yoMamaJokeHandler = async (m, { conn, text }) => {
 
     console.log('JSON response:', json);
 
-    let yoMamaJoke = `${json.pickupline}`;
+    let yoMamaJoke = `${json.yomamajoke}`;
     
     let translation = await translate(yoMamaJoke, { to: 'ar' });
 
