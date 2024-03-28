@@ -1,22 +1,71 @@
-let handler = async (m, { conn, usedPrefix, command }) => {
-  await conn.sendMessage(m.chat, {
-   react: {
- text: "🌌",
- key: m.key,
-   }
-  })
+const handler = async (m, {conn, text, command}) => {
+  const yh = global.Memes;
+  const url = yh[Math.floor(Math.random() * yh.length)];
+  conn.sendMessage(m.chat, {image: {url: url}, caption: '⛩️┃🏮WONO🏮┃⛩️'}, {quoted: m});
+};
+handler.command = /^(ميمز)$/i;
+handler.tags = ['anime'];
+handler.help = ['Memes'];
+export default handler;
 
-  await conn.sendMessage(m.chat, { video: { url: dir[Math.floor(Math.random() * dir.length)] }, caption: global.veeeee }, { quoted: m })
-}
-
-handler.help = ['ميمز']
-handler.tags = ['anime']
-handler.command = /^(ميم|ميمز)$/i
-handler.limit = false
-
-export default handler
-
-const dir = [
+global.Memes = [
+ "https://telegra.ph/file/740ad1859c315fc322191.jpg",
+  "https://telegra.ph/file/184bf10e5c1897c6a7adf.jpg",
+  "https://telegra.ph/file/ec213ff76cb27ff975fea.jpg",
+  "https://telegra.ph/file/557dd9b675438f6948187.jpg",
+  "https://telegra.ph/file/c05adb1f1c4b6200f9f4b.jpg",
+  "https://telegra.ph/file/748aca5e8ce87270a66c3.jpg",
+  "https://telegra.ph/file/1f7212c1f0bfcb4c13104.jpg",
+  "https://telegra.ph/file/ca5941dee6d67cbc97ce0.jpg",
+  "https://telegra.ph/file/ecf7eef2f09000ef8a97f.jpg",
+  "https://telegra.ph/file/52830c9088c96b2f2d9dc.jpg",
+  "https://telegra.ph/file/48e1e809ee4a9801a31c0.jpg",
+  "https://telegra.ph/file/8b7bc75df501d1aac9999.jpg",
+  "https://telegra.ph/file/bfbd6dffb9cdd75c4565f.jpg",
+  "https://telegra.ph/file/3ea1374109d9ea837c712.jpg",
+  "https://telegra.ph/file/b83bb4de0cb6975393801.jpg",
+  "https://telegra.ph/file/d4f04d317996ddbbcfa49.jpg",
+  "https://telegra.ph/file/da7a7a09047bb3f77dd1e.jpg",
+  "https://telegra.ph/file/45dfd7ef7f7780a3c1f83.jpg",
+  "https://telegra.ph/file/ee405de996dd3e52e6feb.jpg",
+  "https://telegra.ph/file/6f7860201f620215a1bd3.jpg",
+  "https://telegra.ph/file/1fc7a06845f91cc3dbf17.jpg",
+  "https://telegra.ph/file/6f2d56a83c667198645f3.jpg",
+  "https://telegra.ph/file/f9435fd259a10eb3d4a2f.jpg",
+  "https://telegra.ph/file/6f8cb1247e92ebaec48d4.jpg",
+  "https://telegra.ph/file/5241d93b0d25644ed4a57.jpg",
+  "https://telegra.ph/file/5241d93b0d25644ed4a57.jpg",
+  "https://telegra.ph/file/b4076988422ce25d58dae.jpg",
+  "https://telegra.ph/file/26b43b07faac626cf5e04.jpg",
+  "https://telegra.ph/file/69e0a1a2f58757f132abd.jpg",
+  "https://telegra.ph/file/9161c4becc39958ddec42.jpg",
+  "https://telegra.ph/file/c529e024dd3b704a43fb6.jpg",
+  "https://telegra.ph/file/9567e4783f0fa58c17fd5.jpg",
+  "https://telegra.ph/file/0437e79f988ef2e8ce093.jpg",
+  "https://telegra.ph/file/ffdf22318450354dc8d3c.jpg",
+  "https://telegra.ph/file/c6b1ebb8aa4e23ee9150f.jpg",
+"htps://telegra.ph/file/25a14cd4fff811de1475f.jpg",
+"https://telegra.ph/file/645de7e8ce68ade591bb2.jpg",
+"https://telegra.ph/file/4b540ca77c8b2a1d1ec57.jpg",
+"https://telegra.ph/file/53a5a6a5b2d71c6d3c163.jpg",
+"https://telegra.ph/file/48571aa7be63a3de59ff2.jpg",
+"https://telegra.ph/file/553bca98fe9dec4270ad7.jpg",
+"https://telegra.ph/file/87a7bda3cfde01d2348ed.jpg",
+"https://telegra.ph/file/7c24e7540548c2d74d424.jpg",
+"https://telegra.ph/file/60eeedd13a6bb5be507b5.jpg",
+"https://telegra.ph/file/328d7865de1bd1971a557.jpg",
+"https://telegra.ph/file/e4b0461725fc22520eda9.jpg",
+"https://telegra.ph/file/9bb6046502993d6ce6518.jpg",
+"https://telegra.ph/file/8890c73047805cf78c00a.jpg",
+"https://telegra.ph/file/dc81295351494c2a1c472.jpg",
+"https://telegra.ph/file/4232a1c385ff9da68aef6.jpg",
+"https://telegra.ph/file/ea550661d8ab4b84c6296.jpg",
+"https://telegra.ph/file/8b2190dc849e24972152c.jpg",
+"https://telegra.ph/file/f207b57a1f51412a203e7.jpg",
+"https://telegra.ph/file/cf2fccd900ff2d0d131a1.jpg",
+"https://telegra.ph/file/940e82466ed78e975a745.jpg",
+"https://telegra.ph/file/b0c749d5e802332dcc11f.jpg",
+"https://telegra.ph/file/769d89ef7f7336bd05a80.jpg",
 "https://telegra.ph/file/f9138226511b3a30e958b.jpg",
 "https://telegra.ph/file/8281fdf957ebca93aec0f.jpg",
 "https://telegra.ph/file/3c6dd91466c9ed89d2bf7.jpg",
@@ -65,6 +114,4 @@ const dir = [
 "https://telegra.ph/file/bf3a36c8f30e56dcbbfa5.jpg",
 "https://telegra.ph/file/3a5b3ea59347b2f8fb805.jpg",
 "https://telegra.ph/file/60262d7d56b4352993e88.jpg",
-
-'',
-]
+];
