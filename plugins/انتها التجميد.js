@@ -38,14 +38,14 @@ export async function before(m) {
         this.spam[m.sender].count++;
 
         // If the sender's spam count reaches 5 or more, mark the sender as banned and set a 5-second cooldown.
-        if (this.spam[m.sender].count >= 5) {
+        if (this.spam[m.sender].count >= 20) {
             users[m.sender].banned = true;
             this.spam[m.sender].lastspam = now + 5000;
 
             // Schedule a timeout to unban the user and reset their spam count after 5 seconds.
             setTimeout(() => {
                 users[m.sender].banned = false;
-                this.spam[m.sender].count = 0;
+                this.spam[m.sender].count = 20;
                 m.reply(`✅ *انتهت فترة التجميد*\nيمكنك إرسال الرسائل مرة أخرى.`);
             }, 5000);
 
@@ -55,7 +55,7 @@ export async function before(m) {
         }
     } else {
         // If the time difference is greater than or equal to 10 seconds, reset the sender's spam count.
-        this.spam[m.sender].count = 10;
+        this.spam[m.sender].count = 20;
     }
 
     // Update the 'lastspam' timestamp to the current time for the sender.
