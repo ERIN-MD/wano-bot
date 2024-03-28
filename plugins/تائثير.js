@@ -34,6 +34,6 @@ ${effects.map((effect) => `_> ${effect}_`).join('\n')}
 };
 handler.help = ['stickfilter (caption|reply media)'];
 handler.tags = ['General'];
-handler.command = /^(stickerfilter|تاثير|cs2)$/i;
+handler.command = /^(stickerfilter|فلتر|cs2)$/i;
 handler.limit = 2;
 export default handler;
