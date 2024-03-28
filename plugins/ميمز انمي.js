@@ -65,7 +65,6 @@ const dir = [
 "https://telegra.ph/file/bf3a36c8f30e56dcbbfa5.jpg",
 "https://telegra.ph/file/3a5b3ea59347b2f8fb805.jpg",
 "https://telegra.ph/file/60262d7d56b4352993e88.jpg",
-];
 
 '',
 ]
