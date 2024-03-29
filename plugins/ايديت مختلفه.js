@@ -18,6 +18,17 @@ export default handler
 
 const dir = [
 
+'https://telegra.ph/file/0de3d724cc7ff6719e671.mp4',
+'https://telegra.ph/file/8711c85e060a892ecce8d.mp4',
+'https://telegra.ph/file/4382948309a4e0e870230.mp4',
+'https://telegra.ph/file/fd37dd25204898350a696.mp4',
+'https://telegra.ph/file/bb75fad7c528982d38765.mp4',
+'https://telegra.ph/file/dd7792e5c4ad8c3619df1.mp4',
+'https://telegra.ph/file/2a709171b97bfdfa52af0.mp4',
+'https://telegra.ph/file/fcf4b7a7647cd96882dd9.mp4',
+'https://telegra.ph/file/b918b17e2ec2601ed8e1d.mp4',
+'https://telegra.ph/file/cbaa57c12c567828e1e21.mp4',
+'https://telegra.ph/file/47af25d732650b1ab7487.mp4',
 'https://telegra.ph/file/d6269a1f7f2bf94a406df.mp4',  'https://telegra.ph/file/8034305ce5330ebc11a99.mp4',  'https://telegra.ph/file/5c70fbac268fb54ff847e.mp4',  'https://telegra.ph/file/f2a6bec5b7635364d6768.mp4',  'https://telegra.ph/file/d7f5799da8e64b9aff5aa.mp4',  'https://telegra.ph/file/261100ff5fe590b08e35d.mp4', 'https://telegra.ph/file/6214d68e0da156ef8e54a.mp4',
 'https://telegra.ph/file/960bece94cac521c5fd68.mp4',
 'https://telegra.ph/file/759c10b0e0a1605ae9716.mp4',
