@@ -436,7 +436,7 @@
       "psepick": 0,
       "robo": 0,
       "roboxp": 0,
-      "lastCommandTime": 1701256023724,
+      "lastCommandTime": 967730068059,
       "commandCount": 1
     },
     "967730068059@s.whatsapp.net": {
@@ -908,8 +908,8 @@
     "a.js": {
       "total": 4,
       "success": 1,
-      "last": 1701256024041,
-      "lastSuccess": 1701250820440
+      "last": 967730068059,
+      "lastSuccess": 967730068059
     }
   },
   "msgs": {},
