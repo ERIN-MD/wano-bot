@@ -153,6 +153,6 @@ const handler = async (m, { conn, args }) => {
 
 handler.help = ['chess [from to]', 'chess delete', 'chess join', 'chess start'];
 handler.tags = ['game'];
-handler.command = /^شطرنج|شت$/i
+handler.command = /^شطرنج$/i
 
 export default handler
