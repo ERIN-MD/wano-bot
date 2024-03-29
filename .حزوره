@@ -3,7 +3,7 @@ conn.reply(m.chat,`*⛩️  مرحبا بك في قسم النكت ⛩️*\n    
 }
 handler.help = ['jwhsjs']
 handler.tags = ['fun']
-handler.command = /نكت|نكته/i
+handler.command = /حزوره|حزورة/i
 export default handler
 
 function pickRandom(list) {
