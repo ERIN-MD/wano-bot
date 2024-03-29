@@ -1,4 +1,4 @@
-const isToxic = /(زب|سكس|طيز|كس|خول|عرص|متناك|xnxx|xxx|عرص)/i;
+const isToxic = /^(زب|سكس|طيز|كس|خول|عرص|متناك|xnxx|xxx|عرص)$/i;
 
 import axios from "axios"
 import fetch from "node-fetch"
