@@ -142,3 +142,34 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 		});
 	} catch {
 		m.reply("Proses gagal :(");
+	} finally {
+		conn.cartoon[m.sender] ? delete conn.cartoon[m.sender] : false;
+	}
+};
+handler.help = ["cartoon"];
+handler.tags = ["ai"];
+handler.command = ["لكرتون"];
+
+handler.premium = false
+
+export default handler;
+;
+			} else {
+				m.reply(
+					"معذرة صديقي الصورة لا تكشف عن وجه رجاء ارسل صورة يكون فيها الوجه مكشوفا وظاهرا."
+				);
+			}
+		});
+	} catch {
+		m.reply("Proses gagal :(");
+	} finally {
+		conn.cartoon[m.sender] ? delete conn.cartoon[m.sender] : false;
+	}
+};
+handler.help = ["cartoon"];
+handler.tags = ["ai"];
+handler.command = ["لكرتون"];
+
+handler.premium = false
+
+export default handler;
