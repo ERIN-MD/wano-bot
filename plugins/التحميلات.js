@@ -18,7 +18,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['التحميلات'];
 handler.tags = ['random'];
-handler. = /^4$/;
+handler. = /^التحميلات$/;
 export default handler;
 
 global. التحميلات = [
