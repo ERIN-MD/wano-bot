@@ -20,7 +20,7 @@ handler.tags = ['random'];
 handler.command = /^4$/;
 export default handler;
 
-global.التنزيلات = [
+global.downloads = [
   'https://telegra.ph/file/afb43b1f36e2d189c764a.mp4',
   
 ];
