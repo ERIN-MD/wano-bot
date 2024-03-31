@@ -29,7 +29,7 @@ const handler = async (m, { conn, args }) => {
 
   if (feature === 'ادخل') {
     const senderId = m.sender;
-    if (players.includes(senderId)) {
+    if (players.includes(senderid)) {
       return conn.reply(m.chat, '『⛩️┃🏮WONO🏮┃⛩️』 *انت لقد قمت بالانضمام بالفعل*', m);
     }
     if (!gameData || gamedata.status !== 'waiting') {
@@ -39,14 +39,14 @@ const handler = async (m, { conn, args }) => {
       return conn.reply(m.chat, '『⛩️┃🏮WONO🏮┃⛩️』 *اكتمل عدد اللاعبين بالفعل.*\nاللعبه هتبدا لوحدها', m);
     }
     players.push(sendertd);
-    hasJoined.push(sendertd);
+    hasjoined.push(sendertd);
     if (players.length === 2) {
       gamedata.status = 'ready';
       const [black, white] = Math.random() < 0.5 ? [players[1], players[0]] : [players[0], players[1]];
       gamedata.black = black;
       gamedata.white = white;
       chessdata.currentTurn = white;
-      return conn.reply(m.chat, `『⛩️┃🏮WONO🏮┃⛩️』 *اللاعبين الي اضمو:*\n${hasJoined.map(playerId => `- @${playerId.split('@')[0]}`).join('\n')}\n\n*الاسود:* @${black.split('@')[0]}\n*الابيض:* @${white.split('@')[0]}\n\nمن فضل استخدم *'شطرنج ابدا'* لبدا اللعبه.`, m, { mentions: hasJoined });
+      return conn.reply(m.chat, `『⛩️┃🏮WONO🏮┃⛩️』 *اللاعبين الي اضمو:*\n${hasjoined.map(playerId => `- @${playerId.split('@')[0]}`).join('\n')}\n\n*الاسود:* @${black.split('@')[0]}\n*الابيض:* @${white.split('@')[0]}\n\nمن فضل استخدم *'شطرنج ابدا'* لبدا اللعبه.`, m, { mentions: hasJoined });
     } else {
       return conn.reply(m.chat, '『⛩️┃🏮WONO🏮┃⛩️』*انت لقد انضممت للعبه الشطرنج.*\nفي انتظار اللاعب الاخر', m);
     }
@@ -67,9 +67,9 @@ const handler = async (m, { conn, args }) => {
       const flipParam2 = senderId === gamedata.black ? '' : '-flip';
       const boardUrl = `https://www.chess.com/dynboard?fen=${encodedfen}&board=graffiti&piece=graffiti&size=3&coordinates=inside${flipParam}`;
       try {
-        await conn.sendFile(m.chat, boardUrl, '', turn, m, false, { mentions: [gamedata.white] });
+        await conn.sendFile(m.chat, boardurl, '', turn, m, false, { mentions: [gamedata.white] });
       } catch (error) {
-        const boardUrl2 = `https://chessboardimage.com/${encodedfen + flipParam2}.png`;
+        const boardUrl2 = `https://chessboardimage.com/${encodedfen + flipparam2}.png`;
         await conn.sendFile(m.chat, boardurl2, '', turn, m, false, { mentions: [gamedata.black] });
       }
       return;
@@ -83,7 +83,7 @@ const handler = async (m, { conn, args }) => {
     if (!gamedata || gamedata.status !== 'playing') {
       return conn.reply(m.chat, '『⛩️┃🏮WONO🏮┃⛩️』 *اللعبه لسه مبدأتش*', m);
     }
-    if (currentTurn !== senderId) {
+    if (currentturn !== senderid) {
       return conn.reply(m.chat, `『⛩️┃🏮WONO🏮┃⛩️』 *المفروض* ${chessdata.currentTurn === gamedata.white ? 'الابيض' : 'الاسود'}'هو الي يتحرك*`, m, {
         contextInfo: {
           mentionedJid: [currentturn]
@@ -101,7 +101,7 @@ const handler = async (m, { conn, args }) => {
     }
     if (chess.isDraw()) {
       delete conn.chess[key];
-      return conn.reply(m.chat, `『⛩️┃🏮WONO🏮┃⛩️』 *تعادل 😑*\n*اللعبه خلصت*\n*الاعبين:* ${hasJoined.map(playerId => `- @${playerId.split('@')[0]}`).join('\n')}`, m, {
+      return conn.reply(m.chat, `『⛩️┃🏮WONO🏮┃⛩️』 *تعادل 😑*\n*اللعبه خلصت*\n*الاعبين:* ${hasjoined.map(playerId => `- @${playerId.split('@')[0]}`).join('\n')}`, m, {
         contextInfo: {
           mentionedJid: hasJoined
         }
@@ -115,19 +115,19 @@ const handler = async (m, { conn, args }) => {
     }
     chessdata.fen = chess.fen();
     const currentTurnIndex = players.indexOf(currentturn);
-    const nextTurnIndex = (currentTurnIndex + 1) % 2;
-    chessdata.currentTurn = players[nextTurnIndex];
+    const nextTurnIndex = (currentturnindex + 1) % 2;
+    chessdata.currentTurn = players[nextturnindex];
     const encodedFen = encodeURIComponent(chess.fen());
-    const currentColor = chessData.currentTurn === gamedata.white ? 'الابيض' : 'الاسود';
+    const currentColor = chessdata.currentTurn === gamedata.white ? 'الابيض' : 'الاسود';
     const turn = `『𝙕𝙊𝙍𝙊-𝘽𝙊𝙏』 *دور:* ${currentcolor} @${chessdata.currentTurn.split('@')[0]}\n\n${chess.getComment() || ''}`;
-    const flipParam = senderId === gamedata.black ? '' : '&flip=true';
-    const flipParam2 = senderId === gamedata.black ? '' : '-flip';
-    const boardUrl = `https://www.chess.com/dynboard?fen=${encodedfen}&board=graffiti&piece=graffiti&size=3&coordinates=inside${flipParam}`;
+    const flipParam = senderid === gamedata.black ? '' : '&flip=true';
+    const flipParam2 = senderid === gamedata.black ? '' : '-flip';
+    const boardUrl = `https://www.chess.com/dynboard?fen=${encodedfen}&board=graffiti&piece=graffiti&size=3&coordinates=inside${flipparam}`;
     try {
       await conn.sendFile(m.chat, boardUrl, '', turn, m, false, { mentions: [chessdata.currentTurn] });
     } catch (error) {
-      const boardUrl2 = `https://chessboardimage.com/${encodedFen + flipParam2}.png`;
-      await conn.sendFile(m.chat, boardUrl2, '', turn, m, false, { mentions: [chessdata.currentTurn] });
+      const boardUrl2 = `https://chessboardimage.com/${encodedfen + flipParam2}.png`;
+      await conn.sendFile(m.chat, boardurl2, '', turn, m, false, { mentions: [chessdata.currentTurn] });
     }
     chess.deleteComment();
     return;
