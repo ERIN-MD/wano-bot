@@ -21,7 +21,7 @@ handler.tags = ['random'];
 handler. = /^4$/;
 export default handler;
 
-global.4 = [
-  ' ',
+global. 4 = [
+  ' https://telegra.ph/file/5d53cc9b66b472ad7de4a.mp4 ',
   
 ];
