@@ -16,12 +16,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *❐║حقوق ┃🏮𝑊𝐴𝑁𝛩🏮』* 
 ✯≼══━━﹂⛩️﹁━━══≽✯* `}, {quoted: m});
 };
-handler.help = ['3'];
+handler.help = ['4'];
 handler.tags = ['random'];
-handler.3 = /^3$/;
+handler.4 = /^4$/;
 export default handler;
 
 global.التحويلات = [
-  'https://telegra.ph/file/f3aebe900dbce40dd98d9.jpg',
+  ' ',
   
 ];
