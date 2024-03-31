@@ -4,12 +4,12 @@ const notStickerMessage = `*رد علي الملصق الذي تريد تحوي�
 if (!m.quoted) throw notStickerMessage
 const q = m.quoted || m
 let mime = q.mediaType || ''
-if (!/sticker/.test(mime)) throw notStickerMessage
+if (.test(mime)) throw notStickerMessage
 let media = await q.download()
 let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
 await conn.sendFile(m.chat, out, 'error.png', null, m)
 }
 handler.help = ['toimg (reply)']
 handler.tags = ['sticker']
-handler.command = ['لصوره', 'صورة', 'لصورة']
+handler.command = ['لصوره', 'لصؤره', 'لصورة']
 export default handler
