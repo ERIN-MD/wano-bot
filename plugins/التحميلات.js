@@ -23,6 +23,6 @@ handler.command = /^4$/;
 export default handler;
 
 global.downloads = [
-  '   ',
+  ' https://telegra.ph/file/afb43b1f36e2d189c764a.mp4   ',
   
 ];
