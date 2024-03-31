@@ -1,5 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const res = await downloads[Math.floor(Math.random() * downloads.length)];
+  const res = await debt[Math.floor(Math.random() * debt.length)];
   conn.sendMessage(m.chat, {video: {url: res}, caption: ` ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم الــ🕋ــديـن*
 ✯≼══━━﹂⛩️﹁━━══≽✯
