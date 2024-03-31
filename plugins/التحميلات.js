@@ -17,7 +17,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['djsnns'];
 handler.tags = ['random'];
-handler.djsnns = /^3$/;
+handler.command = /^3$/;
 export default handler;
 
 global.djsnns = [
