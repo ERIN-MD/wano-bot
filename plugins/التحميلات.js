@@ -1,6 +1,6 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const res = await lolivid[Math.floor(Math.random() * lolivid.length)];
-  conn.sendMessage(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
+  const res = await downloads[Math.floor(Math.random() * ownloads.length)];
+  conn.sendMessage(m.chat, {picture: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم التـحـويلـات*
 ✯≼══━━﹂⛩️﹁━━══≽✯
 *◞❐║🏮║⇠『ملصق』◈◜*
