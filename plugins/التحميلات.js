@@ -1,5 +1,5 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const res = await downloads[Math.floor(Math.random() * djsnns.length)];
+  const res = await djsnns[Math.floor(Math.random() * djsnns.length)];
   conn.djsnns(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم التـحـويلـات*
 ✯≼══━━﹂⛩️﹁━━══≽✯
