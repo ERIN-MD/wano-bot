@@ -1,6 +1,6 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
   const res = await downloads[Math.floor(Math.random() * ownloads.length)];
-  conn.sendMessage(m.chat, {picture: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
+  conn.sendMessage(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم التـحـويلـات*
 ✯≼══━━﹂⛩️﹁━━══≽✯
 *◞❐║🏮║⇠『ملصق』◈◜*
@@ -21,6 +21,6 @@ handler.command = /^4$/;
 export default handler;
 
 global.التنزيلات = [
-  'https://telegra.ph/file/93202d4624c89e0423ccf.jpg',
+  'https://telegra.ph/file/afb43b1f36e2d189c764a.mp4',
   
 ];
