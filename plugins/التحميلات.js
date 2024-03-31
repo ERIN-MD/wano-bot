@@ -16,12 +16,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *❐║حقوق ┃🏮𝑊𝐴𝑁𝛩🏮』* 
 ✯≼══━━﹂⛩️﹁━━══≽✯* `}, {quoted: m});
 };
-handler.help = ['4'];
+handler.help = ['التحميلات'];
 handler.tags = ['random'];
 handler. = /^4$/;
 export default handler;
 
-global. 4 = [
+global. التحميلات = [
   ' https://telegra.ph/file/5d53cc9b66b472ad7de4a.mp4 ',
   
 ];
