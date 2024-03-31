@@ -1,4 +1,4 @@
-const handler = async (m, {conn, usedPrefix, command}) => {
+const handler = async (m, {conn, downloads, command}) => {
   const res = await downloads[Math.floor(Math.random() * downloads.length)];
   conn.sendMessage(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم التـحـويلـات*
