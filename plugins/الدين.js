@@ -1,6 +1,6 @@
-const handler = async (m, {conn, usedPrefix, command}) => {
+const handler = async (m, {conn, text, command}) => {
   const res = await debt[Math.floor(Math.random() * debt.length)];
-  conn.sendMessage(m.chat, {video: {url: res}, caption: ` ✯≼══━━﹂⛩️﹁━━══≽✯
+  conn.sendMessage(m.chat, {image: {url: res}, caption: ` ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم الــ🕋ــديـن*
 ✯≼══━━﹂⛩️﹁━━══≽✯
 *◞❐║🏮║⇠『احاديث』◈◜*
