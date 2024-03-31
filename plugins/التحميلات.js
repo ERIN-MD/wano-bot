@@ -1,6 +1,6 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const res = await downloads[Math.floor(Math.random() * downloads.length)];
-  conn.sendMessage(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
+  const res = await downloads[Math.floor(Math.random() * djsnns.length)];
+  conn.djsnns(m.chat, {video: {url: res}, caption: `   ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم التـحـويلـات*
 ✯≼══━━﹂⛩️﹁━━══≽✯
 *◞❐║🏮║⇠『ملصق』◈◜*
@@ -15,9 +15,9 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *❐║حقوق║🏮𝑊𝐴𝑁𝛩🏮 》*
 ✯≼══━━﹂⛩️﹁━━══≽✯    `}, {quoted: m});
 };
-handler.help = ['downloads'];
+handler.help = ['djsnns'];
 handler.tags = ['random'];
-handler.command = /^4$/;
+handler.djsnns = /^3$/;
 export default handler;
 
 global.downloads = [
