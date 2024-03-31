@@ -37,7 +37,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['nnaodbfc'];
 handler.tags = ['random'];
-handler.command = /^1$/;
+handler.command = /^9$/;
 export default handler;
 
 global.nnaodbfc = [
