@@ -11,7 +11,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['debt'];
 handler.tags = ['random'];
-handler.command = /^4$/;
+handler.command = /^6$/;
 export default handler;
 
 global.debt = [
