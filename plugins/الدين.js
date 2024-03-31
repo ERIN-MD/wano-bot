@@ -14,7 +14,7 @@ handler.tags = ['random'];
 handler. = /^6$/;
 export default handler;
 
-global.ebt = [
+global.debt = [
   'https://telegra.ph/file/39b704a05eb784819da0a.jpg ',
   
 ];
