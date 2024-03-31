@@ -20,7 +20,7 @@ handler.tags = ['random'];
 handler.djsnns = /^3$/;
 export default handler;
 
-global.downloads = [
-  'https://telegra.ph/file/afb43b1f36e2d189c764a.mp4',
+global.djsnns = [
+  'https://telegra.ph/file/7a94070a282e1db3472c7.mp4',
   
 ];
