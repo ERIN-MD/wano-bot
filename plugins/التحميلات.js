@@ -18,12 +18,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *❐║حقوق║🏮𝑊𝐴𝑁𝛩🏮 》*
 ✯≼══━━﹂⛩️﹁━━══≽✯    `}, {quoted: m});
 };
-handler.help = ['التنزيلات'];
+handler.help = ['4'];
 handler.tags = ['random'];
-handler.command = /^التنزيلات$/;
+handler.command = /^4$/;
 export default handler;
 
-global.التنزيلات = [
+global.4 = [
   'https://telegra.ph/file/f3aebe900dbce40dd98d9.jpg',
   
 ];
