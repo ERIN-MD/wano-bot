@@ -1,6 +1,6 @@
 const handler = async (m, {conn, usedPrefix, command}) => {
-  const res = await lolivid[Math.floor(Math.random() * lolivid.length)];
-  conn.sendMessage(m.chat, {video: {url: res}, caption: ` ✯≼══━━﹂⛩️﹁━━══≽✯
+  const res = await debt[Math.floor(Math.random() * debt.length)];
+  conn.sendMessage(m.chat, {picture: {url: res}, caption: ` ✯≼══━━﹂⛩️﹁━━══≽✯
 *اهـلـا بـك فـي قـسـم الــ🕋ــديـن*
 ✯≼══━━﹂⛩️﹁━━══≽✯
 *◞❐║🏮║⇠『احاديث』◈◜*
@@ -9,12 +9,12 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 *❐║حقوق║🏮𝑊𝐴𝑁𝛩🏮》*
 ✯≼══━━﹂⛩️﹁━━══≽✯ `}, {quoted: m});
 };
-handler.help = ['6'];
+handler.help = ['debt'];
 handler.tags = ['random'];
 handler. = /^6$/;
 export default handler;
 
-global.6 = [
-  ' ',
+global.ebt = [
+  'https://telegra.ph/file/39b704a05eb784819da0a.jpg ',
   
 ];
