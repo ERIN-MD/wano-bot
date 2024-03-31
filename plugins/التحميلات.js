@@ -18,10 +18,10 @@ const handler = async (m, {conn, usedPrefix, command}) => {
 };
 handler.help = ['4'];
 handler.tags = ['random'];
-handler.4 = /^4$/;
+handler. = /^4$/;
 export default handler;
 
-global.التحويلات = [
+global.4 = [
   ' ',
   
 ];
