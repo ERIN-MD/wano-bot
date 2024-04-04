@@ -7,13 +7,13 @@ let handler = async (m, { conn, command, usedPrefix }) => {
         conn.reply(m.chat, '❐┃لم يتم الاجابة علي السؤال بعد┃❌ ❯', conn.tebakbendera[id][0])
         throw false
     }
-    let src = await (await fetch('https://gist.githubusercontent.com/kdjrjidj/f159dd50f178cf8872fa7671c03b9c21/raw/2d61961ec06005c17c7ff3b77d8bfca2faa90e93/djhjjerj.txt')).json()
+    let src = await (await fetch('https://gist.githubusercontent.com/kdjrjidj/f159dd50f178cf8872fa7671c03b9c21/raw/2d61961ec06005c17c7ff3b77d8bfca2faa90e93/djhjjerj.txtxtxt')).json()
   let json = src[Math.floor(Math.random() * src.length)]
     let caption = `*${command.toUpperCase()}*
   ❐↞┇الـوقـت⏳↞ *${(timeout / 1000).toFixed(2)} ┇
   *استخدم .انسحب للأنسحاب*
   ❐↞┇الـجـائـزة💰↞ ${poin} نقاط┇
-『⛩️┃🏮𝑊𝐴𝑁𝛩🏮┃⛩️』
+『⛩️┃🏮WONO🏮┃⛩️』
      `.trim()
     conn.tebakbendera[id] = [
         await conn.sendFile(m.chat, json.img, '', caption, m),
