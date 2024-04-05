@@ -15,7 +15,7 @@ let link = img
 }
 handler.help = ['', '2'].map(v => 'wallpaper' + v + ' <query>')
 handler.tags = ['downloader']
-handler.command = /^(wp|خلفية|خلفيه|wallpaper2?)$/i
+handler.command = /^خلفيه$/i
 handler.exp = 29
 handler.limit = 2
 handler.register = true
