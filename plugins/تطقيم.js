@@ -5,9 +5,9 @@ let handler = async (m, { conn }) => {
   let cita = data[Math.floor(Math.random() * data.length)]
   
   let cowi = await(await fetch(cita.sjdbs)).buffer()
-  await conn.sendFile(m.chat, cowi, '', '🏮', m)
+  await conn.sendFile(m.chat, cowi, '⛩️┃🏮𝑊𝐴𝑁𝛩🏮┃⛩️', '👤', m)
   let ciwi = await(await fetch(cita.hsvqwiw)).buffer()
-  await conn.sendFile(m.chat, ciwi, '', '🏮', m)
+  await conn.sendFile(m.chat, ciwi, '⛩️┃🏮𝑊𝐴𝑁𝛩🏮┃⛩️', '👤', m)
 }
 handler.help = ['ppcouple', 'ppcp']
 handler.tags = ['internet']
