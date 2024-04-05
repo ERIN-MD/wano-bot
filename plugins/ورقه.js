@@ -59,5 +59,5 @@ m.reply(`☠️ انت تخسر! ❌\n\n*👉🏻 انت: ${text}\n👉🏻 ال
 }}
 handler.help = ['ppt']
 handler.tags = ['games']
-handler.command = /^(ppt|لعبة|حجر-ورقه-مقص|حجر|ورقه|مقص)$/i
+handler.command = /^لعبة$/i
 export default handler
