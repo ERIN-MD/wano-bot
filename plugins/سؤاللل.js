@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
         conn.reply(m.chat, '❐┃لم يتم الاجابة علي السؤال بعد┃❌ ❯', conn.tebakbendera[id][0])
         throw false
     }
-    let src = await (await fetch('https://gist.githubusercontent.com/kdjrjidj/038d51b3b9f0e816b7057dd0a3baf0f8/raw/b35f21cb374a70e8205fab9175d402736d7b436a/jshrjdii.js')).json()
+    let src = await (await fetch('https://gist.githubusercontent.com/kdjrjidj/038d51b3b9f0e816b7057dd0a3baf0f8/raw/efe902ea0ce1ede8ad65ae01d4f8407ea609615f/jshrjdii.js')).json()
   let json = src[Math.floor(Math.random() * src.length)]
     let caption = `*${command.toUpperCase()}*
   ❐↞┇الـوقـت⏳↞ *${(timeout / 1000).toFixed(2)} ┇
