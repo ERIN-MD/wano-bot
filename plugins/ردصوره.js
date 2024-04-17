@@ -17,7 +17,7 @@ handler.all = async function (m) {
     }
 
     if (/^ناعم$/i.test(m.text) ) {
-       let av = 'https://telegra.ph/file/108c174c4ded321867217.mp4'
+       let av = 'https://telegra.ph/file/73d152270a35f496c3af5.jpg'
        this.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
        return true; // Return true to indicate message is handled
     }
