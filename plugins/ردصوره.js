@@ -11,19 +11,19 @@ handler.all = async function (m) {
     }
 
     if (/^بيض$/i.test(m.text) ) {
-      let av = 'https://telegra.ph/file/afa487da67d87a2faf9dc.jpg'
+      let av = 'https://telegra.ph/file/f62ff4bf0c60415e2fd3a.jpg'
       this.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
       return true; // Return true to indicate message is handled
     }
 
-    if (/^احبك$/i.test(m.text) ) {
-       let av = 'رابط الصوره'
+    if (/^ناعم$/i.test(m.text) ) {
+       let av = 'https://telegra.ph/file/108c174c4ded321867217.mp4'
        this.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
        return true; // Return true to indicate message is handled
     }
 
     if (/^اسطوري$/i.test(m.text) ) {
-        let av = 'رابط الصوره'
+        let av = 'https://telegra.ph/file/afa487da67d87a2faf9dc.jpg'
         this.sendFile(m.chat, av, 'audio.mp3', null, m, true, { type: 'audioMessage', ptt: true })
         return true; // Return true to indicate message is handled
     }
