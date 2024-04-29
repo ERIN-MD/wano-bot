@@ -21,16 +21,16 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                         highlight_label: 'تست',
                         rows: [
                           {
-                            header: 'منشن',
-                            title: 'منشن',
+                            header: 'الاوامر',
+                            title: '',
                             description: '',
-                            id: '.منشن'
+                            id: 'اوامر.'
                           },
                                         {
-                            header: 'الدعم',
-                            title: 'الدعم',
+                            header: 'المطور',
+                            title: '',
                             description: '',
-                            id: '.الدعم'
+                            id: '.المطور.'
                           },
                           {
                             header: 'المطور',
@@ -55,6 +55,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
 handler.help = ['info']
 handler.tags = ['main']
-handler.command = ['الازرار']
+handler.command = ['بوت']
 
 export default handler
