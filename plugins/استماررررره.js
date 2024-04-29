@@ -1,8 +1,8 @@
 let handler = m => m; 
   
- handler.all = async function (m) { 
+ handler.aa11 = async function (m) { 
    let chat = global.db.data.chats[m.chat]; 
-   let responses; 
+   let hssbzhhzdbsh; 
    if (/^(استماره|5|هاي|سلام|مرحبا|هلو|اهلا)$/i.test(m.text)) { 
      hssbzhhzdbsh = [ 
                     `*نرحب بك في مملكة ماستر🌟男*
