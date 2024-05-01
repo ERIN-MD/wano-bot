@@ -33,10 +33,10 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                             id: '.الدعم'
                           },
                           {
-                            header: 'المطور',
-                            title: 'المطور',
+                            header: 'المطور.',
+                            title: 'المطور.',
                             description: '',
-                            id: '.مطور'
+                            id: 'مطور.'
                           }
                         ]
                       }
