@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                             header: '.المطور',
                             title: '.المطور',
                             description: '',
-                            id: '.مطور'
+                            id: '.المطور'
                           }
                         ]
                       }
