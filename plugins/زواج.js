@@ -5,12 +5,12 @@ let a = ps.getRandom()
 let b
 do b = ps.getRandom()
 while (b === a)
-m.reply(`*${taguser} ,  وش رأيك في ثالثة😂*
-*${toM(b)},*لاتزعلي 🤭\n\*نزوجك مارك وش رأيك*`, null, {
+m.reply(`*${toM(a)}, الف مبروك للورع   *
+*${toM(b)},*مبروك للورعه\n\*نزوجك مارك وش رأيك*`, null, {
 mentions: [a, b]
 })}
 handler.help = ['formarpareja']
 handler.tags = ['main', 'fun']
-handler.command = ['زوجني','زواج']
+handler.command = ['زواج','زواج']
 handler.group = true
 export default handler
