@@ -8,7 +8,7 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['967730258559', ' كاتاكوري', true],
+  ['201151094460', ' كاتاكوري', true],
 ];
 
 global.xaxa = 'kata'
